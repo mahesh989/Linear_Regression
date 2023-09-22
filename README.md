@@ -8,10 +8,8 @@ The two main goals of this project are to predict the Total UPDRS score for a th
 The project unfolds through a series of steps. Check the Python code name named Parkinson_Disease_Feature_Selection.py
 ### 1. Data Loading and Preprocessing
 
-
-The dataset has a shape of (1039, 29), indicating 1039 instances and 29 features.
-![Image Alt Text](Dataset_columns.png)
-
+The dataset has a shape of (5875, 22), indicating 5875 instances and 22 features.
+![Image Alt Text](Columns_description.png)
 
 
 #### 1.2 Data Information
@@ -21,4 +19,8 @@ The information about the dataset was obtained using the `.info()` method. It co
 #### 1.3 Duplicate Rows
 
 Duplicate rows were checked using the `.duplicated()` method. No duplicate rows were found in the dataset.
+
+## 2. Exploratory Data Analysis
+Next, we will explore the data. We first checked the proportion of males and females. As shown in the figure below, almost two-thirds of people were male who suffered from Parkinson's Disease.
+![Image Alt Text](Bar_diagram.png)
 
