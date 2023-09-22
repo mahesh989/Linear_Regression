@@ -6,6 +6,7 @@ The two main goals of this project are to predict the Total UPDRS score for a th
 ## Key Steps and Insights
 
 The project unfolds through a series of steps. Check the Python code name named Parkinson_Disease_Feature_Selection.py
+
 ### 1. Data Loading and Preprocessing
 
 The dataset has a shape of (5875, 22), indicating 5875 instances and 22 features.
@@ -88,6 +89,14 @@ The confidence intervals for various dataset characteristics are shown in the ta
 | jitter(ppq5)   | 0.003      | 0.003      | 0.003      |
 | jitter(rap)    | 0.002      | 0.002      | 0.003      |
 | jitter(abs)    | 0.000044   | 0.000043   | 0.000045   |
+
+### 2.4 Box Plotting
+
+In the figure below, box plots give the ideas of outliers present in the data. Some of the features like motor_updrs, total_updrs etc do not contain outliers whereas some of the others contain outliers. 
+
+![Image Alt Text](boxplot.png)
+
+In the dataset containing voice measurements and demographic profiles of individuals with early-stage Parkinson's disease, outliers are observed in various numeric features, potentially indicating subject-specific variations and extreme cases within the dataset. These outliers can impact clinical assessments like the Motor and Total UPDRS scores, making their management a crucial step in statistical analysis and predictive modeling to ensure data accuracy and model reliability.
 
 
 
