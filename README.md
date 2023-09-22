@@ -9,6 +9,7 @@ The project unfolds through a series of steps. Check the Python code name named 
 ### 1. Data Loading and Preprocessing
 
 The dataset has a shape of (5875, 22), indicating 5875 instances and 22 features.
+
 ![Image Alt Text](Columns_description.png)
 
 
@@ -22,6 +23,7 @@ Duplicate rows were checked using the `.duplicated()` method. No duplicate rows 
 
 ## 2. Exploratory Data Analysis
 Next, we will explore the data. We first checked the proportion of males and females. As shown in the figure below, almost two-thirds of people were male who suffered from Parkinson's Disease.
+
 ![Image Alt Text](Bar_diagram.png)
 
 ### 2.1 Measure of Central Tendency
@@ -56,9 +58,10 @@ The dataset's central tendency measurements, mean values, median values, and sta
 
 The histogram plots suggest that most data follow normal distribution with most of them being right skewed like shimmering and jitter columns. 
 
-![Image Alt Text](Bar_diagram.png)
+![Image Alt Text](Histogram.png)
 
 ### 2.3 Confidence Interval
+
 The confidence intervals for various dataset characteristics are shown in the table below. These confidence intervals provide us a range where the genuine population parameter (mean) is most likely to fall. The feature name, its mean value, the lower and upper confidence interval bounds, as well as the table's feature name are all included.
 
 | Feature         | Mean       | CI_Lower   | CI_Upper   |
