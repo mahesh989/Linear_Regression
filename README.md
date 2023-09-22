@@ -98,7 +98,11 @@ In the dataset containing voice measurements and demographic profiles of individ
 
 ### 2.5 Scatter Plotting
 
+
+Each subplot in the initial set of scatter plots shows a particular aspect in connection to the "motor_updrs" score (on the y-axis) (on the x-axis). In contrast, the same chosen attributes are analysed in the next set of scatter plots, but this time, they are plotted against the 'total_updrs' score. These scatter plots are useful tools for quickly evaluating potential relationships and trends between the selected characteristics and the clinical evaluation scores. They are essential to the selection of features and to improving our understanding of the underlying properties of the dataset.
+
 ![Image Alt Text](scatter-plot_motor-updrs.png)
+
 
 ![Image Alt Text](scatter-plot_total-updrs.png)
 
