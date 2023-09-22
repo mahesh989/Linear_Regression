@@ -98,6 +98,6 @@ In the figure below, box plots give the ideas of outliers present in the data. S
 
 In the dataset containing voice measurements and demographic profiles of individuals with early-stage Parkinson's disease, outliers are observed in various numeric features, potentially indicating subject-specific variations and extreme cases within the dataset. These outliers can impact clinical assessments like the Motor and Total UPDRS scores, making their management a crucial step in statistical analysis and predictive modeling to ensure data accuracy and model reliability.
 
-
+### 2.5 Box Plotting
 
 
