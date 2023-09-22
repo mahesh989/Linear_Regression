@@ -1,2 +1,4 @@
-# Linear_Regression
-Predictive model for Parkinson Disease using voice data with Linear Regression 
+# Project Overview
+The main goal of this study is to create precise predictive models for calculating the Total UPDRS score and the Motor UPDRS score in people with early-stage Parkinson's disease. The Total UPDRS score, which ranges from 0 to 176, provides a thorough evaluation of overall disability, whereas the Motor UPDRS score, which ranges from 0 to 108, serves as an important clinical assessment of motor symptoms. The study makes use of a dataset that includes voice measurements and basic demographic information on 42 people who have early-stage Parkinson's disease. 
+
+This information includes details like age, sex, test time, and a number of speech-related factors like jitter, shimmer, RPDE, DFA, and PPE. The project will create predictive models using appropriate machine learning and statistical methods and use cross-validation to make sure they are reliable and generalizable to new data. These models ultimately seek to improve the objective evaluation of Parkinson's disease progression and its effects on patients' lives, potentially enhancing tactics for diagnosis, treatment, and monitoring.
