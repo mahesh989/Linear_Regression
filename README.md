@@ -131,33 +131,40 @@ R2 measures the percentage of the target variable's variation that the model acc
 
 ### 3.1 Using sklearn
 
-### Motor UPDRS Prediction
-- **MAE (Mean Absolute Error):** 5.95
-- **MSE (Mean Squared Error):** 50.87
-- **RMSE (Root Mean Squared Error):** 7.13
-- **R^2 (Coefficient of Determination):** 0.22
+## Model Performance
+### Motor UPDRS Model:
+- **MAE (Mean Absolute Error):** 5.9587
+- **MSE (Mean Squared Error):** 50.9515
+- **RMSE (Root Mean Squared Error):** 7.1380
+- **R-squared (R²):** 0.2165
 
-### Total UPDRS Prediction
-- **MAE (Mean Absolute Error):** 7.46
-- **MSE (Mean Squared Error):** 83.66
-- **RMSE (Root Mean Squared Error):** 9.15
-- **R^2 (Coefficient of Determination):** 0.25
+### Total UPDRS Model:
+- **MAE (Mean Absolute Error):** 7.4484
+- **MSE (Mean Squared Error):** 83.7815
+- **RMSE (Root Mean Squared Error):** 9.1532
+- **R-squared (R²):** 0.2496
 
-### Baseline (Dummy) Model Performance for Motor UPDRS
-- **MAE (Mean Absolute Error):** 6.90
-- **MSE (Mean Squared Error):** 65.04
-- **RMSE (Root Mean Squared Error):** 8.06
-- **R^2 (Coefficient of Determination):** -0.00005
+### Baseline (Dummy) Model for Motor UPDRS:
+- **MAE (Mean Absolute Error):** 6.9018
+- **MSE (Mean Squared Error):** 65.0378
+- **RMSE (Root Mean Squared Error):** 8.0646
+- **R-squared (R²):** -5.28e-05
 
-### Baseline (Dummy) Model Performance for Total UPDRS
-- **MAE (Mean Absolute Error):** 8.54
-- **MSE (Mean Squared Error):** 111.65
-- **RMSE (Root Mean Squared Error):** 10.57
-- **R^2 (Coefficient of Determination):** -0.000000063
+### Baseline (Dummy) Model for Total UPDRS:
+- **MAE (Mean Absolute Error):** 8.5392
+- **MSE (Mean Squared Error):** 111.6500
+- **RMSE (Root Mean Squared Error):** 10.5665
+- **R-squared (R²):** -6.29e-08
 
-The above metrics represent the evaluation results of regression models and baseline (dummy) models for predicting Motor UPDRS and Total UPDRS scores. A higher R^2 value indicates a better fit of the model to the data.The performance metrics for the regression models indicate that they provide better predictions for both Motor UPDRS and Total UPDRS scores compared to the simple dummy models that predict mean values. The regression models have lower MAE and RMSE, implying reduced prediction errors. However, there is still room for improvement in explaining variance (R^2), suggesting that further feature engineering or advanced modelling techniques may enhance predictive accuracy.
+
+The above metrics represent the evaluation results of regression models and baseline (dummy) models for predicting Motor UPDRS and Total UPDRS scores. A higher R^2 value indicates a better fit of the model to the data. The performance metrics for the regression models indicate that they provide better predictions for both Motor UPDRS and Total UPDRS scores compared to the simple dummy models that predict mean values. The regression models have lower MAE and RMSE, implying reduced prediction errors. However, there is still room for improvement in explaining variance (R^2), suggesting that further feature engineering or advanced modelling techniques may enhance predictive accuracy.
 
 ### 3.1 Using statsmodel
+The "Motor UPDRS" and "Total UPDRS" models' R-squared (R2) values show that they account for around 22.86% and 25.81% of the variation in the corresponding target variables, respectively, indicating moderate predictive power. With negative R-squared values, the baseline models for both variables, on the other hand, perform worse than models with no predictive power, suggesting their inefficiency in explaining the variance in the target variables
+![Image Alt Text](model-summary-1_statsmodel.png)
+![Image Alt Text](model-summary-2_statsmodel.png)
+
+
 
 
 
