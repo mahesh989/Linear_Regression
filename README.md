@@ -3,3 +3,22 @@
 
 The two main goals of this project are to predict the Total UPDRS score for a thorough assessment of overall disability in people with early-stage Parkinson's disease and the Motor UPDRS score for a precise assessment of motor symptoms. For better patient outcomes, these goals seek to improve clinical decision-making, treatment planning, and disease management.
 
+## Key Steps and Insights
+
+The project unfolds through a series of steps. Check the Python code name named Parkinson_Disease_Feature_Selection.py
+### 1. Data Loading and Preprocessing
+
+
+The dataset has a shape of (1039, 29), indicating 1039 instances and 29 features.
+![Image Alt Text](Dataset_columns.png)
+
+
+
+#### 1.2 Data Information
+
+The information about the dataset was obtained using the `.info()` method. It confirmed that the dataset contains no missing values, and all columns have either `float64` or `int64` data types.
+
+#### 1.3 Duplicate Rows
+
+Duplicate rows were checked using the `.duplicated()` method. No duplicate rows were found in the dataset.
+
