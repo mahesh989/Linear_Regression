@@ -59,7 +59,7 @@ The dataset's central tendency measurements, mean values, median values, and sta
 
 The histogram plots suggest that most data follow normal distribution with most of them being right skewed like shimmering and jitter columns. 
 
-![Image Alt Text](Histogram.png)
+![Image Alt Text](histogram.png)
 
 ### 2.3 Confidence Interval
 
@@ -98,13 +98,34 @@ In the dataset containing voice measurements and demographic profiles of individ
 
 ### 2.5 Scatter Plotting
 
-
 Each subplot in the initial set of scatter plots shows a particular aspect in connection to the "motor_updrs" score (on the y-axis) (on the x-axis). In contrast, the same chosen attributes are analysed in the next set of scatter plots, but this time, they are plotted against the 'total_updrs' score. These scatter plots are useful tools for quickly evaluating potential relationships and trends between the selected characteristics and the clinical evaluation scores. They are essential to the selection of features and to improving our understanding of the underlying properties of the dataset.
 
 ![Image Alt Text](scatter-plot_motor-updrs.png)
 
-
 ![Image Alt Text](scatter-plot_total-updrs.png)
+
+## 3. Evaluation of the Multiple Regression Model
+In this part, we use the well-known Python machine learning libraries scikit-learn and statsmodels to assess how well our multiple regression models predict both the "Motor UPDRS" and the "Total UPDRS" scores.
+
+To evaluate the model's generalizability to fresh data, we first divide our dataset into training (60%) and test (40%) sets. Using the training data, we create unique linear regression models for each score (Motor UPDRS and Total UPDRS). The test set is then subjected to predictions using these models.
+
+We calculate a number of important indicators to assess the model's performance:
+
+**MAE: Mean Absolute Error**
+The average absolute difference between the expected and actual scores is calculated using this metric. Better model accuracy is indicated by a lower MAE.
+
+**MSE: Mean Squared Error**
+The average squared difference between predicted values and actual values is calculated. Larger mistakes are penalised more severely by MSE.
+
+**RMSE: Root Mean Squared Error** 
+The measure of error in the same units as the target variable is provided by RMSE, which is the square root of MSE.
+
+**R-squared: the coefficient of determination** 
+R2 measures the percentage of the target variable's variation that the model accounts for. A number that is nearer 1 denotes a better match.
+
+
+
+### 3.1 Using sklearn
 
 
 
