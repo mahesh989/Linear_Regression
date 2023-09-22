@@ -111,22 +111,52 @@ To evaluate the model's generalizability to fresh data, we first divide our data
 
 We calculate a number of important indicators to assess the model's performance:
 
-**MAE: Mean Absolute Error**
+__MAE: Mean Absolute Error__
+
+
 The average absolute difference between the expected and actual scores is calculated using this metric. Better model accuracy is indicated by a lower MAE.
 
 **MSE: Mean Squared Error**
+
 The average squared difference between predicted values and actual values is calculated. Larger mistakes are penalised more severely by MSE.
 
 **RMSE: Root Mean Squared Error** 
+
 The measure of error in the same units as the target variable is provided by RMSE, which is the square root of MSE.
 
 **R-squared: the coefficient of determination** 
-R2 measures the percentage of the target variable's variation that the model accounts for. A number that is nearer 1 denotes a better match.
 
+R2 measures the percentage of the target variable's variation that the model accounts for. A number that is nearer 1 denotes a better match.
 
 
 ### 3.1 Using sklearn
 
+Motor UPDRS performance:
+MAE:  5.95258828954926
+MSE:  50.86536029849256
+RMSE:  7.131995534104923
+R^2:  0.21786896117073318
 
+Total UPDRS performance:
+MAE:  7.460047112973453
+MSE:  83.66178422815962
+RMSE:  9.146681596522294
+R^2:  0.25067802984788967
+
+Baseline (Dummy) Model Performance for Motor UPDRS:
+MAE:  6.9018040505688845
+MSE:  65.03775458794435
+RMSE:  8.064598848544442
+R^2:  -5.281119574318538e-05
+
+Baseline (Dummy) Model Performance for Total UPDRS:
+MAE:  8.539218742344953
+MSE:  111.64998868772797
+RMSE:  10.566455824339965
+R^2:  -6.290553788979025e-08
+
+The performance metrics for the regression models indicate that they provide better predictions for both Motor UPDRS and Total UPDRS scores compared to the simple dummy models that predict mean values. The regression models have lower MAE and RMSE, implying reduced prediction errors. However, there is still room for improvement in explaining variance (R^2), suggesting that further feature engineering or advanced modeling techniques may enhance predictive accuracy.
+
+### 3.1 Using statsmodel
 
 
