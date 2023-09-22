@@ -92,12 +92,16 @@ The confidence intervals for various dataset characteristics are shown in the ta
 
 ### 2.4 Box Plotting
 
-In the figure below, box plots give the ideas of outliers present in the data. Some of the features like motor_updrs, total_updrs etc do not contain outliers whereas some of the others contain outliers. 
+In the dataset containing voice measurements and demographic profiles of individuals with early-stage Parkinson's disease, outliers are observed in various numeric features, potentially indicating subject-specific variations and extreme cases within the dataset. These outliers can impact clinical assessments like the Motor and Total UPDRS scores, making their management a crucial step in statistical analysis and predictive modelling to ensure data accuracy and model reliability.
 
 ![Image Alt Text](boxplot.png)
 
-In the dataset containing voice measurements and demographic profiles of individuals with early-stage Parkinson's disease, outliers are observed in various numeric features, potentially indicating subject-specific variations and extreme cases within the dataset. These outliers can impact clinical assessments like the Motor and Total UPDRS scores, making their management a crucial step in statistical analysis and predictive modeling to ensure data accuracy and model reliability.
+### 2.5 Scatter Plotting
 
-### 2.5 Box Plotting
+![Image Alt Text](scatter-plot_motor-updrs.png)
+
+![Image Alt Text](scatter-plot_total-updrs.png)
+
+
 
 
