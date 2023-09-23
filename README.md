@@ -188,7 +188,7 @@ The Motor UPDRS model's R-squared value increased thanks to the Yeo-Johnson tran
 Strong linear associations between the jitter and shimmer measurements are evident in the dataset and significant correlations point to information redundancy. A perfect linear connection, implying virtually equal information, is indicated by the correlation of about 1.0 between jitter(ddp) and jitter(rap). These results imply that the multicollinearity and minimise redundancy of highly correlated features in modelling attempts might be addressed by feature selection or dimensionality reduction strategies.
 
 
-#### 4.4.1 Variance Inflation Factor (VIF)
+#### 4.4.2 Variance Inflation Factor (VIF)
 
 By detecting and removing variables with high Variance Inflation Factors (VIFs), we intended to address multicollinearity in a dataset. VIFs quantify the inflated variance of estimated regression coefficients caused by multicollinearity. A number of variables, including "jitter(%)," "jitter(rap"), "jitter(ddp"), "jitter(%)," "shimmer(%)," "shimmer(apq3," "shimmer(dda")," "shimmer(apq5"," "shimmer(abs")," "jitter(%)," and "jitter(%)," have high VIF values, suggesting multicollinearity problems. These variables were eliminated in order to enhance the precision and understandability of regression models. By strategically reducing multicollinearity, regression analyses were more reliable and understandable.
 
@@ -200,7 +200,7 @@ A dataset's dimensionality can be decreased using the mathematical method of pri
 
 The R-squared values for both models significantly dropped after using Principal Component Analysis (PCA) and lowering the dataset's dimensionality, with the Motor UPDRS model at 0.0902 and the Total UPDRS model at 0.0978. This decrease implies that the main component-focused altered dataset may have lost some explanatory power in comparison to the original dataset. When analysing the results and selecting the best dataset for additional analysis and modelling, it is crucial to take into account this trade-off between dimensionality reduction and model performance.
 
-#### 4.4.3 Backward Elimination Technique 
+#### 4.4.4 Backward Elimination Technique 
 
 We used a backward elimination procedure to choose the most important characteristics from a group of predictor variables in order to model the Motor UPDRS and Total UPDRS scores. We gradually deleted variables with p-values greater than the predetermined significance level (alpha = 0.05) starting with all the characteristics. 'subject#,' 'age,''sex,' 'test_time,' 'jitter(abs),' 'jitter(ddp),''shimmer(apq3),''shimmer(apq11),' 'nhr,' 'hnr,' 'dfa,' and 'ppe' are the final characteristics chosen for both models. These characteristics were shown to have associations with the response variables that were statistically significant, indicating their significance in explaining the variation in UPDRS scores.
 
