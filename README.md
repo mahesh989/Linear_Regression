@@ -165,6 +165,16 @@ The "Motor UPDRS" and "Total UPDRS" models' R-squared (R2) values show that they
 ![Image Alt Text](model-summary-1_statsmodel.png)
 ![Image Alt Text](model-summary-2_statsmodel.png)
 
+## 4. Optimization of the Model 
+### 4.1 Handling Outliers
+The Interquartile Range (IQR) approach is used by the code to find outliers in a dataset. Each column's IQR is determined, upper and lower boundaries are established based on a threshold, and any rows that fall outside of these constraints are either removed or replaced by the mean values. Extreme data items that might bias the model's performance and cause overfitting are removed or replaced using this approach. By minimising the impact of outliers on the training process, this data-cleaning technique  may improve the resilience and accuracy of the model. 
+
+We found that the explanatory power of both the 'Motor UPDRS' and 'Total UPDRS' models slightly decreased after removing outliers from the dataset. The 'Motor UPDRS' model's R² dropped from 0.2286 to 0.2127, while the 'Total UPDRS' model's R² decreased from 0.2581 to 0.2386. This suggests that outliers may have contained valuable information or that the initial data distribution, influenced by outliers, contributed positively to model performance. Despite outlier removal, the baseline models remained ineffective in explaining target variable variance.
+
+
+
+
+
 
 
 
