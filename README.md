@@ -166,7 +166,13 @@ The "Motor UPDRS" and "Total UPDRS" models' R-squared (R2) values show that they
 ![Image Alt Text](model-summary-2_statsmodel.png)
 
 ## 4. Optimization of the Model 
+
+### 4.1 Cross Validation
+
+The mean RMSE score marginally increased after VIF preprocessing, which was used to analyse the model performance for "motor_updrs" and "total_updrs." The performance of the model for "motor_updrs" was rather stable, with RMSE scores falling between around 2.332 and 5.099. After VIF preprocessing, the lowest RMSE score was obtained (about 2.332). The mean RMSE score for 'total_updrs' increased significantly from around 5.333 to 5.298. VIF preprocessing had a negligible effect on the performance of the 'total_updrs' model, with RMSE scores varying between around 2.571 and 8.362. The 'total_updrs' original data yielded the lowest RMSE score, which was around 2.571. The findings imply that the original data marginally outperformed the VIF-preprocessed data in terms of RMSE for both "motor_updrs" and "total_updrs," but these differences were not statistically significant.
+
 ### 4.1 Handling Outliers
+
 The Interquartile Range (IQR) approach is used by the code to find outliers in a dataset. Each column's IQR is determined, upper and lower boundaries are established based on a threshold, and any rows that fall outside of these constraints are either removed or replaced by the mean values. Extreme data items that might bias the model's performance and cause overfitting are removed or replaced using this approach. By minimising the impact of outliers on the training process, this data-cleaning technique  may improve the resilience and accuracy of the model. 
 
 We found that, after eliminating outliers from the dataset, the explanatory power of both the "Motor UPDRS" and "Total UPDRS" models somewhat declined. The R2 for the 'Motor UPDRS' model declined from 0.2286 to 0.2127, while the R2 for the 'Total UPDRS' model went from 0.2581 to 0.2386. This implies that either the original data distribution, impacted by the outliers, contributed favourably to model performance, or that outliers may have held important information. The baseline models were still unable to adequately explain the variation of the target variable when outliers were removed.
@@ -216,6 +222,14 @@ After rescaling and linear regression, the R-squared values for the Motor UPDRS 
 The explanatory variables (features) of both ' motor_updrs' and 'total_updrs' are transformed using the Box-Cox method, a method for power-converting data, to make them more closely resemble Gaussian (normal) distributions. By determining the ideal transformation parameter, lambda (), for each variable, the Box-Cox transformation modifies the skewness and kurtosis of the data. It tries to improve the adherence to the assumptions of linear regression, hence increasing the reliability and accuracy of the model, by making the explanatory variables more Gaussian-like. To possibly produce more reliable and accurate modelling findings, linear regression models are built and evaluated utilising the modified explanatory variables after the transformation.
 
 After applying the Box-Cox transformation, we observed changes in the R-squared values for both the 'Motor UPDRS Model' and the 'Total UPDRS Model' compared to the original summary. Specifically, the R-squared value for the 'Motor UPDRS Model' increased from 0.2286 to 0.2413, indicating a slightly better goodness of fit for predicting motor UPDRS scores. However, the 'Total UPDRS Model' also saw a change, with the R-squared value decreasing from 0.2581 to 0.2544. Nevertheless, these changes are relatively small, suggesting that the Box-Cox transformation had a limited impact on model performance. The baseline (dummy) models for both motor and total UPDRS remained essentially unchanged.
+
+
+## 5 Conclusion
+In conclusion, our effort effectively created regression models to forecast both Motor and Total UPDRS scores for people with Parkinson's disease in its early phases. These models showed that they were better than the baseline models and had a reasonable level of predictive power. The R-squared values, however, make it clear that a sizable percentage of the score fluctuation is still unaccounted for, indicating the need for more improvements.
+
+Future research should concentrate on improving the modelling approaches, maybe looking into more sophisticated algorithms to better capture the complex interactions within the dataset. Additionally, there is need for improvement in the feature selection procedure. Collaboration with domain experts and healthcare professionals is crucial to ensuring the real-world usability of these models. Their knowledge can close the gap between statistical forecasts and clinical judgements, resulting in better Parkinson's disease treatment and patient outcomes. As this research develops, a better comprehension of the clinical implications of the predictions and the incorporation of increasingly complicated modelling methodologies will play a crucial role in accomplishing the ultimate objective of improving treatment for people with Parkinson's disease in its early phases.
+
+
 
 
 
