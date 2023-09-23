@@ -206,6 +206,20 @@ We used a backward elimination procedure to choose the most important characteri
 
 We noticed very minor drops in the R-squared values for both the Total UPDRS and Motor UPDRS models after using backward feature selection. The R-squared of the Total UPDRS model dropped from 0.2581 to 0.2566, while that of the Motor UPDRS model fell from 0.2286 to 0.2280. These marginal declines show that, in comparison to the original models with all features, the selected subset of characteristics, as indicated by their statistical significance, explains somewhat less variation in the response variables. However, these variations are slight and can be regarded as insignificant in actual usage.
 
+### 4.5 Multicollinearity
+
+We also standardize explanatory variables to ensure a mean of 0 and a standard deviation of 1, enhancing the stability and interpretability of the resulting models.  They predict both ' motor_updrs' and 'total_updrs' using standardized explanatory variables. 
+
+After rescaling and linear regression, the R-squared values for the Motor UPDRS and Total UPDRS models have marginally altered. The motor UPDRS model has an R-squared value of around 0.2180, meaning that standardised predictor variables can account for 21.80% of the variation in motor UPDRS scores. The Total UPDRS model has an R-squared value of around 0.2529, meaning that standardised predictors can account for 25.29 per cent of the variation in total UPDRS scores. Since the baseline models have not altered, it is clear that more complex models are required to identify important linkages that go beyond mean values.
+
+### 4.6 Box-Cox transformation
+The explanatory variables (features) of both ' motor_updrs' and 'total_updrs' are transformed using the Box-Cox method, a method for power-converting data, to make them more closely resemble Gaussian (normal) distributions. By determining the ideal transformation parameter, lambda (), for each variable, the Box-Cox transformation modifies the skewness and kurtosis of the data. It tries to improve the adherence to the assumptions of linear regression, hence increasing the reliability and accuracy of the model, by making the explanatory variables more Gaussian-like. To possibly produce more reliable and accurate modelling findings, linear regression models are built and evaluated utilising the modified explanatory variables after the transformation.
+
+After applying the Box-Cox transformation, we observed changes in the R-squared values for both the 'Motor UPDRS Model' and the 'Total UPDRS Model' compared to the original summary. Specifically, the R-squared value for the 'Motor UPDRS Model' increased from 0.2286 to 0.2413, indicating a slightly better goodness of fit for predicting motor UPDRS scores. However, the 'Total UPDRS Model' also saw a change, with the R-squared value decreasing from 0.2581 to 0.2544. Nevertheless, these changes are relatively small, suggesting that the Box-Cox transformation had a limited impact on model performance. The baseline (dummy) models for both motor and total UPDRS remained essentially unchanged.
+
+
+
+
 
 
 
