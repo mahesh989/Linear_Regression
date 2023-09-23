@@ -194,12 +194,17 @@ By detecting and removing variables with high Variance Inflation Factors (VIFs),
 
 The R-squared values for both the Motor UPDRS and Total UPDRS Models somewhat dropped when columns with high Variance Inflation Factors (VIFs) were removed in order to reduce multicollinearity. The R-squared of the Motor UPDRS Model specifically dropped from 0.2286 to 0.2204, indicating a little reduction in the variation in motor UPDRS scores explained by predictor factors. The R-squared for the Total UPDRS Model also fell, from 0.2581 to 0.2517, showing a modest decline in the amount of variation in total UPDRS scores that was explained. It's crucial to notice that the changes in R-squared values are very minimal, indicating that the model's performance was only slightly affected by the removal of multicollinear variables.
 
-#### 4.4.2  Principal component analysis (PCA)
+#### 4.4.3  Principal component analysis (PCA)
 
 A dataset's dimensionality can be decreased using the mathematical method of principal component analysis (PCA), while still maintaining the dataset's key information. It was used to create principle components, linear combinations of the original variables, from a dataset with many variables. These elements include the data's most notable patterns and variances. A selection of columns from the modified dataset, including "subject#," "age," "sex," "test_time," "jitter(%)," "motor_updrs," and "total_updrs," were kept after PCA. These columns reduce the complexity of the data while efficiently summarising its variation and patterns. This choice minimises complexity and multicollinearity while maintaining crucial information on the characteristics of the subjects, the time of the test, and the motor UPDRS scores. 
 
 The R-squared values for both models significantly dropped after using Principal Component Analysis (PCA) and lowering the dataset's dimensionality, with the Motor UPDRS model at 0.0902 and the Total UPDRS model at 0.0978. This decrease implies that the main component-focused altered dataset may have lost some explanatory power in comparison to the original dataset. When analysing the results and selecting the best dataset for additional analysis and modelling, it is crucial to take into account this trade-off between dimensionality reduction and model performance.
 
+#### 4.4.3 Backward Elimination Technique 
+
+We used a backward elimination procedure to choose the most important characteristics from a group of predictor variables in order to model the Motor UPDRS and Total UPDRS scores. We gradually deleted variables with p-values greater than the predetermined significance level (alpha = 0.05) starting with all the characteristics. 'subject#,' 'age,''sex,' 'test_time,' 'jitter(abs),' 'jitter(ddp),''shimmer(apq3),''shimmer(apq11),' 'nhr,' 'hnr,' 'dfa,' and 'ppe' are the final characteristics chosen for both models. These characteristics were shown to have associations with the response variables that were statistically significant, indicating their significance in explaining the variation in UPDRS scores.
+
+We noticed very minor drops in the R-squared values for both the Total UPDRS and Motor UPDRS models after using backward feature selection. The R-squared of the Total UPDRS model dropped from 0.2581 to 0.2566, while that of the Motor UPDRS model fell from 0.2286 to 0.2280. These marginal declines show that, in comparison to the original models with all features, the selected subset of characteristics, as indicated by their statistical significance, explains somewhat less variation in the response variables. However, these variations are slight and can be regarded as insignificant in actual usage.
 
 
 
