@@ -179,6 +179,16 @@ In order to attain linearity in linear regression, the Yeo-Johnson Power Transfo
 
 The Motor UPDRS model's R-squared value increased thanks to the Yeo-Johnson transformation from 0.2286 to 0.2341, indicating a more effective explanation of variance than the original model. The Total UPDRS model, on the other hand, showed a little decline from 0.2581 to 0.2562, which indicated no gain in performance. Small variations in R-squared values might happen, thus these modifications should be understood in the context of the particular dataset and the type of processing.
 
+### 4.4 Multicollinearity
+
+#### 4.4.1 Correlation Matrix: Heat Map
+
+![Image Alt Text](heatmap.png)
+
+Strong linear associations between the jitter and shimmer measurements are evident in the dataset and significant correlations point to information redundancy. A perfect linear connection, implying virtually equal information, is indicated by the correlation of about 1.0 between jitter(ddp) and jitter(rap). These results imply that the multicollinearity and minimise redundancy of highly correlated features in modelling attempts might be addressed by feature selection or dimensionality reduction strategies.
+
+
+#### 4.4.1 Variance Inflation Factor (VIF)
 
 
 
