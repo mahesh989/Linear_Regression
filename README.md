@@ -225,9 +225,12 @@ After applying the Box-Cox transformation, we observed changes in the R-squared 
 
 
 ## 5 Conclusion
+
+![Image Alt Text](comparison.png)
+
 In conclusion, our effort effectively created regression models to forecast both Motor and Total UPDRS scores for people with Parkinson's disease in its early phases. These models showed that they were better than the baseline models and had a reasonable level of predictive power. The R-squared values, however, make it clear that a sizable percentage of the score fluctuation is still unaccounted for, indicating the need for more improvements.
 
-Future research should concentrate on improving the modelling approaches, maybe looking into more sophisticated algorithms to better capture the complex interactions within the dataset. Additionally, there is need for improvement in the feature selection procedure. Collaboration with domain experts and healthcare professionals is crucial to ensuring the real-world usability of these models. Their knowledge can close the gap between statistical forecasts and clinical judgements, resulting in better Parkinson's disease treatment and patient outcomes. As this research develops, a better comprehension of the clinical implications of the predictions and the incorporation of increasingly complicated modelling methodologies will play a crucial role in accomplishing the ultimate objective of improving treatment for people with Parkinson's disease in its early phases.
+Future research should concentrate on improving the modelling approaches, maybe looking into more sophisticated algorithms to better capture the complex interactions within the dataset. Additionally, there is a need for improvement in the feature selection procedure. Collaboration with domain experts and healthcare professionals is crucial to ensuring the real-world usability of these models. Their knowledge can close the gap between statistical forecasts and clinical judgements, resulting in better Parkinson's disease treatment and patient outcomes. As this research develops, a better comprehension of the clinical implications of the predictions and the incorporation of increasingly complicated modelling methodologies will play a crucial role in accomplishing the ultimate objective of improving treatment for people with Parkinson's disease in its early phases.
 
 
 
