@@ -212,7 +212,7 @@ We used a backward elimination procedure to choose the most important characteri
 
 We noticed very minor drops in the R-squared values for both the Total UPDRS and Motor UPDRS models after using backward feature selection. The R-squared of the Total UPDRS model dropped from 0.2581 to 0.2566, while that of the Motor UPDRS model fell from 0.2286 to 0.2280. These marginal declines show that, in comparison to the original models with all features, the selected subset of characteristics, as indicated by their statistical significance, explains somewhat less variation in the response variables. However, these variations are slight and can be regarded as insignificant in actual usage.
 
-### 4.5 Multicollinearity
+### 4.5 Rescaling
 
 We also standardize explanatory variables to ensure a mean of 0 and a standard deviation of 1, enhancing the stability and interpretability of the resulting models.  They predict both ' motor_updrs' and 'total_updrs' using standardized explanatory variables. 
 
